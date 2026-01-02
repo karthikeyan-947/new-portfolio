@@ -10,6 +10,10 @@ import sliceTexture from '~/assets/slice-app.jpg';
 import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
+// Custom project images
+import busnavTexture from '~/assets/busnav-project.png';
+import instiTrackTexture from '~/assets/institrack-project.png';
+import readifyTexture from '~/assets/readify-project.png';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -116,8 +120,8 @@ export const Home = () => {
           alt: 'BusNav bus guidance system',
           textures: [
             {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
-              placeholder: sprTexturePlaceholder,
+              srcSet: `${busnavTexture} 1280w, ${busnavTexture} 2560w`,
+              placeholder: busnavTexture,
             },
           ],
         }}
@@ -128,21 +132,21 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="InstiTrack - College Bus Tracking"
-        description="An innovative bus tracking app for colleges that allows students to view their bus's live location and stop alerts"
+        title="Readify & Litro - Tamil AI Apps"
+        description="AI-powered applications for Tamil literature: Readify reads poems aloud with natural pronunciation, Litro helps engage with Tamil classics"
         buttonText="View project"
         buttonLink="#project-2"
         model={{
           type: 'phone',
-          alt: 'InstiTrack mobile app',
+          alt: 'Readify Tamil poetry app',
           textures: [
             {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
+              srcSet: `${readifyTexture} 375w, ${readifyTexture} 750w`,
+              placeholder: readifyTexture,
             },
             {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: `${readifyTexture} 375w, ${readifyTexture} 750w`,
+              placeholder: readifyTexture,
             },
           ],
         }}
@@ -152,17 +156,17 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Readify & Litro - Tamil AI Apps"
-        description="AI-powered applications for Tamil literature: Readify reads poems aloud with natural pronunciation, Litro helps engage with Tamil classics"
+        title="InstiTrack - College Bus Tracking"
+        description="An innovative bus tracking app for colleges that allows students to view their bus's live location and stop alerts"
         buttonText="View project"
         buttonLink="#project-3"
         model={{
           type: 'laptop',
-          alt: 'Readify Tamil poetry app',
+          alt: 'InstiTrack college bus tracking',
           textures: [
             {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
+              srcSet: `${instiTrackTexture} 800w, ${instiTrackTexture} 1920w`,
+              placeholder: instiTrackTexture,
             },
           ],
         }}
