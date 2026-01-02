@@ -15,6 +15,8 @@ import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
 import { Profile } from './profile';
 import { ProjectSummary } from './project-summary';
+import { Education } from './education';
+import { Achievements } from './achievements';
 import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
@@ -54,9 +56,11 @@ export const Home = () => {
   const projectTwo = useRef();
   const projectThree = useRef();
   const details = useRef();
+  const education = useRef();
+  const achievements = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, details, education, achievements];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -167,6 +171,16 @@ export const Home = () => {
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
         id="details"
+      />
+      <Education
+        sectionRef={education}
+        visible={visibleSections.includes(education.current)}
+        id="education"
+      />
+      <Achievements
+        sectionRef={achievements}
+        visible={visibleSections.includes(achievements.current)}
+        id="achievements"
       />
       <Footer />
     </div>
