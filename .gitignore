@@ -11,3 +11,6 @@ public/draco
 storybook-static
 .vercel
 .env*.local
+
+# Local Netlify folder
+.netlify

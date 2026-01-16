@@ -20,15 +20,20 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I'm Karthikeyan, a 2nd year B.Tech Information Technology student at Chettinad
-      College of Engineering & Technology. I'm an aspiring tech innovator who loves
-      turning ideas into impactful digital products. My projects include AI applications,
-      web development, and innovative solutions for real-world problems.
+      I'm a self-taught B.Tech IT student and a project-based learner who enjoys building
+      real-world solutions with technology. I focus on identifying practical problems and
+      turning ideas into usable MVPs, especially in areas like AI tools, web platforms,
+      and productivity systems. I believe the best way to learn is by building, testing,
+      failing, and iterating in public.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I enjoy learning new technologies and constantly improving my skills through
-      hands-on projects. I'm always excited about new opportunities, so feel free to
-      reach out!
+      Most of my learning comes from hands-on projects rather than theory alone. I actively
+      work on improving my development skills, understanding systems end-to-end, and
+      shipping things that actually work.
+    </Text>
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+      I'm interested in internships, collaborations, and opportunities where I can
+      contribute as a builder while continuing to grow through real-world experience.
     </Text>
   </Fragment>
 );
