@@ -14,6 +14,7 @@ import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
 import busnavTexture from '~/assets/busnav-project.png';
 import instiTrackTexture from '~/assets/institrack-project.png';
 import readifyTexture from '~/assets/readify-project.png';
+import collexTexture from '~/assets/collex-project.png';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -59,12 +60,13 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
   const details = useRef();
   const education = useRef();
   const achievements = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details, education, achievements];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details, education, achievements];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -167,6 +169,27 @@ export const Home = () => {
             {
               srcSet: `${instiTrackTexture} 800w, ${instiTrackTexture} 1920w`,
               placeholder: instiTrackTexture,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        alternate
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
+        title="Collex - Student Project Marketplace"
+        description="A web platform for students to showcase and sell their academic projects. Built with HTML, CSS, and JavaScript with scalable UI for future backend integration."
+        buttonText="View project"
+        buttonLink="https://github.com/karthikeyan-947/Collex"
+        model={{
+          type: 'laptop',
+          alt: 'Collex student project marketplace',
+          textures: [
+            {
+              srcSet: `${collexTexture} 800w, ${collexTexture} 1920w`,
+              placeholder: collexTexture,
             },
           ],
         }}
