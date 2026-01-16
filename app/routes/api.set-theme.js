@@ -4,6 +4,7 @@ export async function action({ request, context }) {
   const formData = await request.formData();
   const theme = formData.get('theme');
 
+  const env = context?.cloudflare?.env || {};
   const { getSession, commitSession } = createCookieSessionStorage({
     cookie: {
       name: '__session',
@@ -11,7 +12,7 @@ export async function action({ request, context }) {
       maxAge: 604_800,
       path: '/',
       sameSite: 'lax',
-      secrets: [process.env.SESSION_SECRET || 'default-session-secret'],
+      secrets: [env.SESSION_SECRET || 'default-session-secret'],
       secure: true,
     },
   });
